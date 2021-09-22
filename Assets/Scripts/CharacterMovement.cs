@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    private float characterMoveSpeed;
+    [SerializeField] private float characterMoveSpeed;
     private float dirX;
 
     // Start is called before the first frame update
     void Start()
     {
-        characterMoveSpeed = 5f;
+        //characterMoveSpeed = 5f;
     }
 
     // Update is called once per frame
