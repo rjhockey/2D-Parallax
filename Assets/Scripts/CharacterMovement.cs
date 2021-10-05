@@ -42,7 +42,7 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isTouchingGround)
         {
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpSpeed);
-            isTouchingGround = false;
+            //isTouchingGround = false;
         }
     }
 }
