@@ -5,19 +5,19 @@ public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
-    public HealthBar healthBar; // drag healthbar into slot
+    public HealthBar healthBar; // drag healthbar onto slot
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = 50;
-        healthBar.SetMaxHealth(maxHealth); // inherited funct.   
+        healthBar.SetMaxHealth(maxHealth); // SetMaxHealth is inherited method   
     }
 
     // Update is called once per frame
     void Update()
     {
-        // use period key to test adding life
+        // use spacebar key to test. Use OnTriggerEnter2D like below for game damage
         if (Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(20);
@@ -30,7 +30,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
 
         // updates healthbar display to reflect above action
-        healthBar.SetHealth(currentHealth); // inherited funct.
+        healthBar.SetHealth(currentHealth);
     }
 
     public void AddLife(int damage)
